@@ -62,6 +62,8 @@
 			document.querySelector('#telefone').value = '';
 			document.querySelector('#ra').value = '';
 
+			aluno = {};
+
 			btnSalvar.textContent = 'Cadastrar';
 			btnCancelar.textContent = 'Limpar';
 
@@ -83,7 +85,8 @@
 			xhr.send();
 		}
 
-		function salvarEstudantes(metodo, id, corpo) {
+		function salvarEstudantes(metodo, id, corpo)
+		{
 			var xhr = new XMLHttpRequest();
 
 			if(id === undefined || id === 0)
@@ -93,6 +96,22 @@
 			xhr.setRequestHeader('Content-Type', 'application/json');
 			xhr.send(JSON.stringify(corpo));
 		}
+
+		function excluirEstudante(id)
+		{
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('DELETE', `http://localhost:50221/api/Aluno/${id}`, false);
+
+			xhr.send();
+		}
+
+		function excluir(id)
+		{
+			excluirEstudante(id);
+			carregaEstudantes();
+		}
+
 		carregaEstudantes('GET');
 
 		function editarEstudante(estudante){
@@ -121,7 +140,10 @@
 							<td>${estudante.sobrenome}</td>
 							<td>${estudante.telefone}</td>
 							<td>${estudante.ra}</td>
-							<td><button onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button></td>
+							<td>
+								<button onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button>
+								<button onclick='excluir(${estudante.id})'>Excluir</button>
+							</td>
 					    </tr>`
 					   
 			tbody.innerHTML += trow;
