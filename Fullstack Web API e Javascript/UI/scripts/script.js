@@ -111,8 +111,8 @@
 						<td>${estudante.telefone}</td>
 						<td>${estudante.ra}</td>
 						<td>
-							<button onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button>
-							<button onclick='excluir(${estudante.id})'>Excluir</button>
+							<button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button>
+							<button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onclick='excluir(${estudante.id})'>Excluir</button>
 						</td>
 				    </tr>`
 				   
