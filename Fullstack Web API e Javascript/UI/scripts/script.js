@@ -19,13 +19,14 @@
 			salvarEstudantes('PUT', aluno.id, aluno);
 		}
 		carregaEstudantes();
+
+		$('#myModal').modal('hide');
 	}
 
-	function Cancelar()
+	function NovoAluno()
 	{
 		var btnSalvar = document.querySelector('#btnSalvar');
-		var btnCancelar = document.querySelector('#btnCancelar');
-		var titulo = document.querySelector('#titulo');
+		var tituloModal = document.querySelector('#tituloModal');
 
 		document.querySelector('#nome').value = '';
 		document.querySelector('#sobrenome').value = '';
@@ -35,9 +36,30 @@
 		aluno = {};
 
 		btnSalvar.textContent = 'Cadastrar';
-		btnCancelar.textContent = 'Limpar';
 
 		titulo.textContent = 'Cadastrar Aluno'
+
+		$('#myModal').modal('show');
+
+	}
+
+	function Cancelar()
+	{
+		var btnSalvar = document.querySelector('#btnSalvar');
+		var tituloModal = document.querySelector('#tituloModal');
+
+		document.querySelector('#nome').value = '';
+		document.querySelector('#sobrenome').value = '';
+		document.querySelector('#telefone').value = '';
+		document.querySelector('#ra').value = '';
+
+		aluno = {};
+
+		btnSalvar.textContent = 'Cadastrar';
+
+		titulo.textContent = 'Cadastrar Aluno'
+
+		$('#myModal').modal('hide');
 	}
 
 	function carregaEstudantes() {
@@ -76,18 +98,34 @@
 		xhr.send();
 	}
 
-	function excluir(id)
+	function excluir(estudante)
 	{
-		excluirEstudante(id);
-		carregaEstudantes();
+		bootbox.confirm({
+			message: `Deseja excluir o estudante ${estudante.nome} ?`,
+			buttons: {
+				confirm: {
+					label: 'Sim',
+					className: 'btn-success'
+				},
+				cancel: {
+					label: 'Não',
+					className: 'btn-danger'
+				}
+			},
+			callback: function (result) {
+				if(result){
+					excluirEstudante(estudante.id);
+					carregaEstudantes();
+				}
+			}
+		});
 	}
 
 	carregaEstudantes('GET');
 
 	function editarEstudante(estudante){
 		var btnSalvar = document.querySelector('#btnSalvar');
-		var btnCancelar = document.querySelector('#btnCancelar');
-		var titulo = document.querySelector('#titulo');
+		var tituloModal = document.querySelector('#tituloModal');
 
 		document.querySelector('#nome').value = estudante.nome;
 		document.querySelector('#sobrenome').value = estudante.sobrenome;
@@ -97,7 +135,7 @@
 		btnSalvar.textContent = 'Salvar';
 		btnCancelar.textContent = 'Cancelar';
 
-		titulo.textContent = `Editar Aluno ${estudante.nome}`;
+		tituloModal.textContent = `Editar Aluno ${estudante.nome}`;
 
 		aluno = estudante;
 
@@ -106,15 +144,15 @@
 
 	function adicionaLinha(estudante) {
 		var trow = `<tr>
-						<td>${estudante.nome}</td>
-						<td>${estudante.sobrenome}</td>
-						<td>${estudante.telefone}</td>
-						<td>${estudante.ra}</td>
-						<td>
-							<button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button>
-							<button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onclick='excluir(${estudante.id})'>Excluir</button>
-						</td>
-				    </tr>`
-				   
+		<td>${estudante.nome}</td>
+		<td>${estudante.sobrenome}</td>
+		<td>${estudante.telefone}</td>
+		<td>${estudante.ra}</td>
+		<td>
+		<button class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick='editarEstudante(${JSON.stringify(estudante)})'>Editar</button>
+		<button class="btn btn-danger" data-toggle="modal" onclick='excluir(${JSON.stringify(estudante)})'>Excluir</button>
+		</td>
+		</tr>`
+
 		tbody.innerHTML += trow;
 	}
