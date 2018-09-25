@@ -64,16 +64,25 @@
 
 	function carregaEstudantes() {
 		tbody.innerHTML = ''
+
 		var xhr = new XMLHttpRequest();
+
 		xhr.open(`GET`, `http://localhost:50221/api/Aluno`, true);
 
-		xhr.onload = function () {
-			var estudantes = JSON.parse(this.responseText);
-			for(var indice in estudantes){
-				adicionaLinha(estudantes[indice]);
+		xhr.onreadystatechange = function () {
+			if(this.readyState == 4){
+				if(this.status == 200){
+					var estudantes = JSON.parse(this.responseText);
+					for(var indice in estudantes){
+						adicionaLinha(estudantes[indice]);
+					}
+				}
+				else if(this.status == 500){
+					var erro = JSON.parse(this.responseText);
+					console.log(erro);
+				}
 			}
 		}
-
 		xhr.send();
 	}
 
