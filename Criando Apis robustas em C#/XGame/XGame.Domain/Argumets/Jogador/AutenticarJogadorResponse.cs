@@ -6,6 +6,5 @@ namespace XGame.Domain.Argumets.Jogador
     {
         public string PrimeiroNome { get; set; }
         public string Email { get; set; }
-
     }
 }
