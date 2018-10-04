@@ -1,11 +1,12 @@
 ﻿using System;
 using XGame.Domain.Argumets.Jogador;
+using XGame.Domain.Entities;
 
 namespace XGame.Domain.Interfaces.Repositories
 {
     public interface IRepositoryJogador
     {
-        AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request);
-        Guid AdicionarJogador(AdicionarJogadorRequest resquest);
+        AutenticarJogadorResponse AutenticarJogador(string email, string senha);
+        Guid AdicionarJogador(Jogador jogador);
     }
 }
