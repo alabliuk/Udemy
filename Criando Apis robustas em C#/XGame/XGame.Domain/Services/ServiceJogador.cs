@@ -26,12 +26,18 @@ namespace XGame.Domain.Services
 
         public AdicionarJogadorResponse AdicionarJogador(AdicionarJogadorRequest request)
         {
-            Jogador jogador = new Jogador();
-            jogador.Email = request.Email;
-            jogador.Nome = request.Nome;
-            jogador.Status = Enum.EnumSituacaoJogador.EmAndamento;
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+            var email = new Email(request.Email);
+
+            Jogador jogador = new Jogador(nome, email, request.Senha);
+
+            if (this.IsValid())
+            {
+                return null;
+            }
 
             Guid id = _repositoryJogador.AdicionarJogador(jogador);
+
             return new AdicionarJogadorResponse() { Id = id, Message = "Operação Realizada com sucesso" };
         }
 

@@ -5,9 +5,10 @@ namespace XGame.Domain.Argumets.Jogador
 {
     public class AdicionarJogadorRequest : IResponse
     {
-        public Nome Nome { get; set; }
-        public Email Email { get; set; }
+        public string Email { get; set; }
         public string Senha { get; set; }
         public string ConfirmaSenha { get; set; }
+        public string UltimoNome { get; set; }
+        public string PrimeiroNome { get; set; }
     }
 }
