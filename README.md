@@ -3,6 +3,9 @@ Repositório de estudos utilizando a plataforma Udemy
 
 URLs:
 
+Aprenda Javascript com Facilidade do Zero
+https://www.udemy.com/aprenda-javascript-com-facilidade-do-zero
+
 Criando Apis robustas em C# 
 https://www.udemy.com/criando-apis-robustas-em-c/
 
