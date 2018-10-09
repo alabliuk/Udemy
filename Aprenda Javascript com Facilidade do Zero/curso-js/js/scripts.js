@@ -89,3 +89,13 @@ var v_boolean = idade > 18 ;
 console.log(typeof v_string);  // retorna string
 console.log(typeof v_numero);  // retorna number
 console.log(typeof v_boolean);  // retorna boolean
+
+
+//----------------------------------------------------------------
+// AULA 7
+var undf = undefined;
+var nl = null;
+console.log(nl === undf);  // O console mostrará false
+
+console.log(typeof undf);  // O console mostrará undefined
+console.log(typeof nl);  // O console mostrará object
