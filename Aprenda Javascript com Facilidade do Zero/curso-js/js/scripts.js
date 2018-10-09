@@ -80,3 +80,12 @@ console.log(idade_num); // O console mostrará 18
 
 //----------------------------------------------------------------
 // AULA 6
+
+var v_string = "teste";
+var v_numero = 4.55;
+var idade = 21;
+var v_boolean = idade > 18 ;
+
+console.log(typeof v_string);  // retorna string
+console.log(typeof v_numero);  // retorna number
+console.log(typeof v_boolean);  // retorna boolean
