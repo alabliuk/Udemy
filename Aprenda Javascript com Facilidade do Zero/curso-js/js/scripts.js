@@ -109,42 +109,59 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // document.getElementById("caixa_azul").innerHTML = '<h1>' + document.getElementById("caixa_azul").innerHTML + '</h1>';
 
 
-//----------------------------------------------------------------
-// AULA 11
-function soma_numeros() {
-    var x = 5;
-    var y = 2;
-    var soma = x + y;
-    console.log(soma);
-}
+// //----------------------------------------------------------------
+// // AULA 12
+// function soma_numeros() {
+//     var x = 5;
+//     var y = 2;
+//     var soma = x + y;
+//     console.log(soma);
+// }
 
-soma_numeros();
+// soma_numeros();
 
-function soma_args(num1, num2) {
-    var soma = num1 + num2;
-    return soma;
-}
+// function soma_args(num1, num2) {
+//     var soma = num1 + num2;
+//     return soma;
+// }
 
-console.log("Resultado da soma: " + soma_args(10, 20));
+// console.log("Resultado da soma: " + soma_args(10, 20));
 
-var soma = soma_args(10, 20);
+// var soma = soma_args(10, 20);
 
-console.log("--------------------------------------------------------");
-console.log("---------DESAFIO IMC------------------------------------");
-console.log("--------------------------------------------------------");
+// console.log("--------------------------------------------------------");
+// console.log("---------DESAFIO IMC------------------------------------");
+// console.log("--------------------------------------------------------");
 
-function valor_imc(peso,altura) {
-    var imc = peso / (altura * altura);
-    return imc;
-}
+// function valor_imc(peso,altura) {
+//     var imc = peso / (altura * altura);
+//     return imc;
+// }
 
-var meu_peso = document.getElementById("peso").innerHTML;
-var minha_altura = document.getElementById("altura").innerHTML;
-var meu_imc = valor_imc(meu_peso,minha_altura);
-document.getElementById("imc").innerHTML = meu_imc.toFixed(2);
+// var meu_peso = document.getElementById("peso").innerHTML;
+// var minha_altura = document.getElementById("altura").innerHTML;
+// var meu_imc = valor_imc(meu_peso,minha_altura);
+// document.getElementById("imc").innerHTML = meu_imc.toFixed(2);
 
-//Definir a quantidade de casas decimais a serem exibidas
-//.toFixed(Casas)
+// //Definir a quantidade de casas decimais a serem exibidas
+// //.toFixed(Casas)
 
-//Converter para float
-//parseFloat()
+// //Converter para float
+// //parseFloat()
+
+
+// //----------------------------------------------------------------
+// // AULA 13
+
+var ingredientes = ["pao branco", "queijo", "presunto"];
+ingredientes[0] = "pao integral"
+
+console.log(ingredientes);
+
+ingredientes[4] = "maionese"
+console.log(ingredientes);
+
+var alunos = [ "João" , "Maria", "José", "Andre", "Lucas", "Mario" ];
+console.log(alunos.slice(2,4));
+console.log(alunos.slice(0,-4));
+
