@@ -42,7 +42,7 @@
 // console.log(Math.pow(media, 4));
 
 /* Parênteses podem ser usados para montar expressões. Neste caso eles são necessários para calcular a média de dois números, 
-caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ordem das operações matemáticas. */  
+caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ordem das operações matemáticas. */
 
 // var increment = 20;
 // increment = increment + 5; // redefinimos o valor dela, para o valor que ela já possuía, mais 5.
@@ -105,5 +105,46 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // //Atribuindo conteudo da caixa azul na caixa amarela
 // document.getElementById("caixa_amarela").innerHTML = conteudo_caixa;
 
-document.getElementById("caixa_amarela").innerHTML = '<h1>' + 'caixa amarela' + '</h1>';
-document.getElementById("caixa_azul").innerHTML = '<h1>' + document.getElementById("caixa_azul").innerHTML + '</h1>';
+// document.getElementById("caixa_amarela").innerHTML = '<h1>' + 'caixa amarela' + '</h1>';
+// document.getElementById("caixa_azul").innerHTML = '<h1>' + document.getElementById("caixa_azul").innerHTML + '</h1>';
+
+
+//----------------------------------------------------------------
+// AULA 11
+function soma_numeros() {
+    var x = 5;
+    var y = 2;
+    var soma = x + y;
+    console.log(soma);
+}
+
+soma_numeros();
+
+function soma_args(num1, num2) {
+    var soma = num1 + num2;
+    return soma;
+}
+
+console.log("Resultado da soma: " + soma_args(10, 20));
+
+var soma = soma_args(10, 20);
+
+console.log("--------------------------------------------------------");
+console.log("---------DESAFIO IMC------------------------------------");
+console.log("--------------------------------------------------------");
+
+function valor_imc(peso,altura) {
+    var imc = peso / (altura * altura);
+    return imc;
+}
+
+var meu_peso = document.getElementById("peso").innerHTML;
+var minha_altura = document.getElementById("altura").innerHTML;
+var meu_imc = valor_imc(meu_peso,minha_altura);
+document.getElementById("imc").innerHTML = meu_imc.toFixed(2);
+
+//Definir a quantidade de casas decimais a serem exibidas
+//.toFixed(Casas)
+
+//Converter para float
+//parseFloat()
