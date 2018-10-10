@@ -110,7 +110,7 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 
 
 // //----------------------------------------------------------------
-// // AULA 12
+// // AULA 11
 // function soma_numeros() {
 //     var x = 5;
 //     var y = 2;
@@ -151,17 +151,64 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 
 
 // //----------------------------------------------------------------
+// // AULA 12
+
+// var ingredientes = ["pao branco", "queijo", "presunto"];
+// ingredientes[0] = "pao integral"
+
+// console.log(ingredientes);
+
+// ingredientes[4] = "maionese"
+// console.log(ingredientes);
+
+// var alunos = [ "João" , "Maria", "José", "Andre", "Lucas", "Mario" ];
+// console.log(alunos.slice(2,4));
+// console.log(alunos.slice(0,-4));
+
+// //----------------------------------------------------------------
 // // AULA 13
 
-var ingredientes = ["pao branco", "queijo", "presunto"];
-ingredientes[0] = "pao integral"
+var funcionario = {
+    'nome': 'Pedro Souza Gomes',
+    'ano_nasc': 1972,
+    'cpf': '111.111.111.11',
+    'cargo': 'Analista de Sistemas'
+};
 
-console.log(ingredientes);
+console.log(funcionario['nome']);
+console.log(funcionario.ano_nasc);
 
-ingredientes[4] = "maionese"
-console.log(ingredientes);
+funcionario.cargo = 'Gerente de TI';
+funcionario.cnh = '00123132994';
 
-var alunos = [ "João" , "Maria", "José", "Andre", "Lucas", "Mario" ];
-console.log(alunos.slice(2,4));
-console.log(alunos.slice(0,-4));
+console.log(funcionario);
 
+var cursos = [
+    {
+        'titulo': 'Aprenda programação em Python 3 com facilidade do zero',
+        'avaliacoes': 680,
+        'alunos': 2300,
+        'categorias': ['programacao', 'tecnologia']
+    },
+
+    {
+        'titulo': 'Aprenda PHP e faça sites dinâmicos',
+        'avaliacoes': 180,
+        'alunos': 350,
+        'categorias': ['desenvolvimento web', 'programacao']
+    },
+
+    {
+        'titulo': 'Excel do Zero ao Avançado',
+        'avaliacoes': 420,
+        'alunos': 1800,
+        'categorias': ['produtividade', 'gestão']
+    }
+];
+
+console.log(cursos[1].categorias[0]);
+
+cursos[2].categorias[1] = 'administração de empresas'
+
+console.log(cursos[2].categorias[1]);
+console.log(cursos);
