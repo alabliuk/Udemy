@@ -214,21 +214,21 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // console.log(cursos);
 
 
-// //----------------------------------------------------------------
-// // AULA 14
+// // //----------------------------------------------------------------
+// // // AULA 14
 
-var aluno = {
-    'nome': 'Maria',
-    'sobrenome': 'Pereira',
-    'ano_nasc': 1992,
-    'idade': function () {
-        var calcIdade = 2018 - this.ano_nasc;
-        return calcIdade;
-    },
-    'nome_completo': function () {
-        var nomeCompleto = this.nome + ' ' + this.sobrenome;
-        return nomeCompleto;
-    }
-}
-console.log(aluno.nome_completo());
-console.log(aluno.idade());
+// var aluno = {
+//     'nome': 'Maria',
+//     'sobrenome': 'Pereira',
+//     'ano_nasc': 1992,
+//     'idade': function () {
+//         var calcIdade = 2018 - this.ano_nasc;
+//         return calcIdade;
+//     },
+//     'nome_completo': function () {
+//         var nomeCompleto = this.nome + ' ' + this.sobrenome;
+//         return nomeCompleto;
+//     }
+// }
+// console.log(aluno.nome_completo());
+// console.log(aluno.idade());
