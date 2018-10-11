@@ -165,50 +165,70 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // console.log(alunos.slice(2,4));
 // console.log(alunos.slice(0,-4));
 
+// // //----------------------------------------------------------------
+// // // AULA 13
+
+// var funcionario = {
+//     'nome': 'Pedro Souza Gomes',
+//     'ano_nasc': 1972,
+//     'cpf': '111.111.111.11',
+//     'cargo': 'Analista de Sistemas'
+// };
+
+// console.log(funcionario['nome']);
+// console.log(funcionario.ano_nasc);
+
+// funcionario.cargo = 'Gerente de TI';
+// funcionario.cnh = '00123132994';
+
+// console.log(funcionario);
+
+// var cursos = [
+//     {
+//         'titulo': 'Aprenda programação em Python 3 com facilidade do zero',
+//         'avaliacoes': 680,
+//         'alunos': 2300,
+//         'categorias': ['programacao', 'tecnologia']
+//     },
+
+//     {
+//         'titulo': 'Aprenda PHP e faça sites dinâmicos',
+//         'avaliacoes': 180,
+//         'alunos': 350,
+//         'categorias': ['desenvolvimento web', 'programacao']
+//     },
+
+//     {
+//         'titulo': 'Excel do Zero ao Avançado',
+//         'avaliacoes': 420,
+//         'alunos': 1800,
+//         'categorias': ['produtividade', 'gestão']
+//     }
+// ];
+
+// console.log(cursos[1].categorias[0]);
+
+// cursos[2].categorias[1] = 'administração de empresas'
+
+// console.log(cursos[2].categorias[1]);
+// console.log(cursos);
+
+
 // //----------------------------------------------------------------
-// // AULA 13
+// // AULA 14
 
-var funcionario = {
-    'nome': 'Pedro Souza Gomes',
-    'ano_nasc': 1972,
-    'cpf': '111.111.111.11',
-    'cargo': 'Analista de Sistemas'
-};
-
-console.log(funcionario['nome']);
-console.log(funcionario.ano_nasc);
-
-funcionario.cargo = 'Gerente de TI';
-funcionario.cnh = '00123132994';
-
-console.log(funcionario);
-
-var cursos = [
-    {
-        'titulo': 'Aprenda programação em Python 3 com facilidade do zero',
-        'avaliacoes': 680,
-        'alunos': 2300,
-        'categorias': ['programacao', 'tecnologia']
+var aluno = {
+    'nome': 'Maria',
+    'sobrenome': 'Pereira',
+    'ano_nasc': 1992,
+    'idade': function () {
+        var calcIdade = 2018 - this.ano_nasc;
+        return calcIdade;
     },
-
-    {
-        'titulo': 'Aprenda PHP e faça sites dinâmicos',
-        'avaliacoes': 180,
-        'alunos': 350,
-        'categorias': ['desenvolvimento web', 'programacao']
-    },
-
-    {
-        'titulo': 'Excel do Zero ao Avançado',
-        'avaliacoes': 420,
-        'alunos': 1800,
-        'categorias': ['produtividade', 'gestão']
+    'nome_completo': function () {
+        var nomeCompleto = this.nome + ' ' + this.sobrenome;
+        return nomeCompleto;
     }
-];
-
-console.log(cursos[1].categorias[0]);
-
-cursos[2].categorias[1] = 'administração de empresas'
-
-console.log(cursos[2].categorias[1]);
-console.log(cursos);
+}
+console.log(aluno.nome_completo());
+console.log(aluno.idade());
