@@ -232,3 +232,28 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // }
 // console.log(aluno.nome_completo());
 // console.log(aluno.idade());
+
+
+// ----------------------------------------------------------------
+// AULA 16
+
+// document.getElementById("click-me").onclick = function () {
+//     alert("Voce clicou no botão");
+// }
+
+// document.getElementById("hover-me").onmouseover = function () {
+//     alert("Voce passou com o cursor no botão");
+// }
+
+// document.getElementById("leave-me").onmouseout = function () {
+//     alert("Voce saiu com o cursor no botão");
+// }
+
+// document.onkeydown = function() {
+//     alert('Voce apertou a tecla: ' + event.keyCode);
+// };
+
+function button_clicked() {
+    alert("Voce clicou no botao");
+}
+

@@ -84,7 +84,7 @@ function criarTabela() {
         ; tableHtml += '</tr>'
         ; tableHtml += '</table>'
         ; tableHtml += '</div>';
-        return tableHtml;
+    return tableHtml;
 }
 
 document.getElementById('tabela').innerHTML = criarTabela();
