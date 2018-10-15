@@ -277,8 +277,43 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 //     this.style.transform = "translateX(100px)";
 // };
 
-// ----------------------------------------------------------------
-// AULA 18
+// // ----------------------------------------------------------------
+// // AULA 18
 
-var paragrafos = document.getElementsByTagName("p");
-console.log(paragrafos);
+// var paragrafos = document.getElementsByTagName("p");
+// console.log(paragrafos);
+
+// // ----------------------------------------------------------------
+// // AULA 19
+
+// for (var a = 0; a < 10; a++) {
+//     console.log(a);
+// }
+
+// var alunos = ['Pedro', 'Maria', 'José', 'João', 'Carlos'];
+// for (var a = 0; a < alunos.length; a++) {
+//     console.log(alunos[a]);
+// }
+
+// var carro = {
+//     'Ano': 2018,
+//     'Modelo': 'Fox',
+//     'Cilindradas': '1.8',
+//     'Combustível': 'Gasolina'
+// }
+
+// for (var prop in carro) {
+//     console.log(prop + ': ' + carro[prop]);
+// }
+
+// var elementos = document.getElementsByClassName("exemplo");
+// for (var c = 0; c < elementos.length; c++) {
+//     elementos[c].style.color = "orange";
+//     elementos[c].style["font-weight"] = "bold";
+// }
+
+var elementos = document.getElementsByTagName("p");
+for (var c = 0; c < elementos.length; c++) {
+    elementos[c].style.color = "orange";
+    elementos[c].style["font-weight"] = "bold";
+}
