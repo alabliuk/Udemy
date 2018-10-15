@@ -253,7 +253,26 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 //     alert('Voce apertou a tecla: ' + event.keyCode);
 // };
 
-function button_clicked() {
-    alert("Voce clicou no botao");
-}
+// function button_clicked() {
+//     alert("Voce clicou no botao");
+// }
 
+// ----------------------------------------------------------------
+// AULA 17
+
+// EXEMPLOS DE MANIPULAÇÃO DE CSS
+// document.getElementById('botao_cor').onclick = function () {
+//     document.getElementById('botao_cor').style["background-color"] = "purple";
+//     document.getElementById('botao_cor').style.transform = "translateX(100px)";
+// };
+// OUUUU
+// document.getElementById('botao_cor').onclick = function () {
+//     this.style["background-color"] = "purple";
+//     this.style.transform = "translateX(100px)";
+// };
+// OUUU
+var botao = document.getElementById('botao_cor');
+botao.onclick = function () {
+    this.style["background-color"] = "purple";
+    this.style.transform = "translateX(100px)";
+};
