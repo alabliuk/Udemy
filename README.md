@@ -3,6 +3,9 @@ Repositório de estudos utilizando a plataforma Udemy
 
 URLs:
 
+JavaScript - Curso Completo com 6 Projetos Reais
+https://www.udemy.com/javascript-curso-completo
+
 Aprenda Javascript com Facilidade do Zero
 https://www.udemy.com/aprenda-javascript-com-facilidade-do-zero
 
