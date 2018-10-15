@@ -271,8 +271,14 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 //     this.style.transform = "translateX(100px)";
 // };
 // OUUU
-var botao = document.getElementById('botao_cor');
-botao.onclick = function () {
-    this.style["background-color"] = "purple";
-    this.style.transform = "translateX(100px)";
-};
+// var botao = document.getElementById('botao_cor');
+// botao.onclick = function () {
+//     this.style["background-color"] = "purple";
+//     this.style.transform = "translateX(100px)";
+// };
+
+// ----------------------------------------------------------------
+// AULA 18
+
+var paragrafos = document.getElementsByTagName("p");
+console.log(paragrafos);
