@@ -319,9 +319,9 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // }
 
 // // ----------------------------------------------------------------
-// // AULA 19
+// // AULA 20
 
-var elementos = document.getElementsByTagName("p");
+// var elementos = document.getElementsByTagName("p");
 // var c = 0;
 // while (c <= elementos.length) {
 //     elementos[c].style.color = "orange";
@@ -329,14 +329,54 @@ var elementos = document.getElementsByTagName("p");
 //     c++
 // }
 
-var x = 1;
-while (x <= 10) {
-    console.log(x);
-    x++;
-}
+// var x = 1;
+// while (x <= 10) {
+//     console.log(x);
+//     x++;
+// }
 
-var y = 7;
-do {
-    console.log(y);
-    y++;
-} while (y <= 10);
+// var y = 7;
+// do {
+//     console.log(y);
+//     y++;
+// } while (y <= 10);
+
+
+// // ----------------------------------------------------------------
+// // AULA 21
+
+// // ----------------------------------------------------------------
+// // AULA 22
+
+var funcionarios = [
+
+    {
+        'nome': 'Carlos Henrique da Silva',
+        'idade': 45,
+        'filhos': ['Mariana Alves da Silva', 'Fernanda Alves da Silva']
+    },
+    {
+        'nome': 'Maria Helena Pereira',
+        'idade': 32,
+        'filhos': ['João Pedro Pereira de Souza']
+    },
+    {
+        'nome': 'José Feliciano Maia',
+        'idade': 39,
+        'filhos': ['Felipe Ferreira Maia', 'Fábio Ferreira Maia', 'João Ferreira Maia']
+    }
+
+];
+
+var list_element = document.getElementById("filhos");
+
+for (var a = 0; a < funcionarios.length; a++) {
+    if (funcionarios[a].filhos) {
+
+        var lista_filhos = funcionarios[a].filhos;
+
+        for (var b = 0; b < lista_filhos.length; b++) {
+            list_element.innerHTML += '<li>' + lista_filhos[b] + ' - Filho(a) de ' + funcionarios[a].nome + '</li>';
+        }
+    }
+}
