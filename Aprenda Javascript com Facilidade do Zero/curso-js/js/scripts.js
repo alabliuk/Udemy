@@ -312,8 +312,31 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 //     elementos[c].style["font-weight"] = "bold";
 // }
 
+// var elementos = document.getElementsByTagName("p");
+// for (var c = 0; c < elementos.length; c++) {
+//     elementos[c].style.color = "orange";
+//     elementos[c].style["font-weight"] = "bold";
+// }
+
+// // ----------------------------------------------------------------
+// // AULA 19
+
 var elementos = document.getElementsByTagName("p");
-for (var c = 0; c < elementos.length; c++) {
-    elementos[c].style.color = "orange";
-    elementos[c].style["font-weight"] = "bold";
+// var c = 0;
+// while (c <= elementos.length) {
+//     elementos[c].style.color = "orange";
+//     elementos[c].style["font-weight"] = "bold";
+//     c++
+// }
+
+var x = 1;
+while (x <= 10) {
+    console.log(x);
+    x++;
 }
+
+var y = 7;
+do {
+    console.log(y);
+    y++;
+} while (y <= 10);
