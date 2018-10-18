@@ -25,7 +25,25 @@ var aboutUs = {
 var unseletected_color = "#646872";
 var seletected_color = "#2A2D34";
 
+var about_tags = document.getElementsByClassName("single-tab");
 
+for (var a = 0; a < about_tags.length; a++) {
+  about_tags[a].onclick = function () {
+
+    //Tirando seleção
+    for (var b = 0; b < about_tags.length; b++) {
+      about_tags[b].style['background-color'] = unseletected_color;
+      about_tags[b].style['font-weigt'] = "normal";
+    }
+
+    //Aplicando seleção
+    this.style['background-color'] = seletected_color;
+    this.style['font-weigt'] = "bold";
+
+    var selecionado = this.innerHTML;
+    document.getElementById("box-text").innerHTML = aboutUs[selecionado];
+  };
+}
 
 // Slider de serviços
 
