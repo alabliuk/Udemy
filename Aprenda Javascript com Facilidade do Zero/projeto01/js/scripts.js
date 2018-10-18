@@ -1,7 +1,17 @@
 
 // Menu Mobile
 
+var menu = document.getElementById("sliding-header-menu-outer");
 
+//Abrir Menu
+document.getElementById("hamburguer-icon").onclick = function () {
+  menu.style.right = '0';
+}
+
+//Fechar Menu
+document.getElementById("sliding-header-menu-close-button").onclick = function () {
+  menu.style.right = '-320px';
+}
 
 
 // About us Tab
@@ -34,16 +44,9 @@ var our_services = [
     'title': 'Marketing Digital',
     'text': 'Nunc et quam in magna vehicula sollicitudin. Aliquam erat volutpat. Maecenas dolor mi, aliquet ac quam aliquet, condimentum dictum nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus.'
   }
-  
+
 ];
 
 
 // Data Footer
 
-
-
-  
-   
-
-
-   
