@@ -65,6 +65,37 @@ var our_services = [
 
 ];
 
+var serviceNext = document.getElementById("service-next");
+var servicePrevious = document.getElementById("service-previous");
+var serviceTitle = document.getElementById("service-title");
+var serviceText = document.getElementById("service-text");
+
+var servicoAtual = 0;
+
+serviceNext.onclick = function () {
+  if (servicoAtual >= our_services.length - 1)
+    servicoAtual = 0;
+  else
+    servicoAtual++;
+  populaBox(servicoAtual);
+}
+
+servicePrevious.onclick = function () {
+  if (servicoAtual == 0)
+    servicoAtual = our_services.length - 1;
+  else
+    servicoAtual--;
+  populaBox(servicoAtual);
+}
+
+function populaBox(servicoAtual) {
+  serviceTitle.innerHTML = our_services[servicoAtual].title;
+  serviceText.innerHTML = our_services[servicoAtual].text;
+}
+
+
+
+
 
 // Data Footer
 
