@@ -348,35 +348,44 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // // ----------------------------------------------------------------
 // // AULA 22
 
-var funcionarios = [
+// var funcionarios = [
 
-    {
-        'nome': 'Carlos Henrique da Silva',
-        'idade': 45,
-        'filhos': ['Mariana Alves da Silva', 'Fernanda Alves da Silva']
-    },
-    {
-        'nome': 'Maria Helena Pereira',
-        'idade': 32,
-        'filhos': ['João Pedro Pereira de Souza']
-    },
-    {
-        'nome': 'José Feliciano Maia',
-        'idade': 39,
-        'filhos': ['Felipe Ferreira Maia', 'Fábio Ferreira Maia', 'João Ferreira Maia']
-    }
+//     {
+//         'nome': 'Carlos Henrique da Silva',
+//         'idade': 45,
+//         'filhos': ['Mariana Alves da Silva', 'Fernanda Alves da Silva']
+//     },
+//     {
+//         'nome': 'Maria Helena Pereira',
+//         'idade': 32,
+//         'filhos': ['João Pedro Pereira de Souza']
+//     },
+//     {
+//         'nome': 'José Feliciano Maia',
+//         'idade': 39,
+//         'filhos': ['Felipe Ferreira Maia', 'Fábio Ferreira Maia', 'João Ferreira Maia']
+//     }
 
-];
+// ];
 
-var list_element = document.getElementById("filhos");
+// var list_element = document.getElementById("filhos");
 
-for (var a = 0; a < funcionarios.length; a++) {
-    if (funcionarios[a].filhos) {
+// for (var a = 0; a < funcionarios.length; a++) {
+//     if (funcionarios[a].filhos) {
 
-        var lista_filhos = funcionarios[a].filhos;
+//         var lista_filhos = funcionarios[a].filhos;
 
-        for (var b = 0; b < lista_filhos.length; b++) {
-            list_element.innerHTML += '<li>' + lista_filhos[b] + ' - Filho(a) de ' + funcionarios[a].nome + '</li>';
-        }
-    }
+//         for (var b = 0; b < lista_filhos.length; b++) {
+//             list_element.innerHTML += '<li>' + lista_filhos[b] + ' - Filho(a) de ' + funcionarios[a].nome + '</li>';
+//         }
+//     }
+// }
+
+
+// // ----------------------------------------------------------------
+// // AULA 24
+
+window.onmousemove = function (e) {
+    console.log("Eixo Y: " + e.pageY);
+    console.log("Eixo X: " + e.pageX);
 }

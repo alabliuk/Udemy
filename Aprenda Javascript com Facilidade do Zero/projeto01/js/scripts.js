@@ -93,16 +93,8 @@ function populaBox(servicoAtual) {
   serviceText.innerHTML = our_services[servicoAtual].text;
 }
 
-
-
-
-
 // Data Footer
 
 var anoAtual = new Date();
 anoAtual = anoAtual.getFullYear();
 document.getElementById("current_year").innerHTML = anoAtual;
-
-console.log(anoAtual);
-
-//current_year

@@ -228,8 +228,13 @@ main .dark_box .dark_box_content {
 
 
 
-#bottom-area {
-    
+#bottom-area .section-index{
+    background-color: #F0F0F0;
+    padding: 12px 6px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+
 }
 
 #bottom-area .link-aula {
@@ -239,6 +244,8 @@ main .dark_box .dark_box_content {
     margin-top: 50px;
 }
 
+
+
 #bottom-area .link-aula a {
     font-weight: 700;
     font-family:'Poppins', sans-serif;
@@ -246,6 +253,8 @@ main .dark_box .dark_box_content {
     text-decoration: none;
     font-size: 15px;
 }
+
+
 
 #bottom-area #prev_class {
     text-align: left;
@@ -291,9 +300,6 @@ main .dark_box .dark_box_content {
 
 
 
-
-
-
 #form_area label {
     display: block;
     margin-bottom: 0;
@@ -305,6 +311,7 @@ main .dark_box .dark_box_content {
     padding: 14px;
     display: block;
 }
+
 
 
 

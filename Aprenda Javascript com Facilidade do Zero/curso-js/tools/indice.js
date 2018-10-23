@@ -2,9 +2,11 @@
 
 var classes = {
 
+   
     'primeiros_passos': {
         'titulo': 'Primeiros Passos',
-        'url': '01-primeiros-passos.html'   
+        'url': '01-primeiros-passos.html',
+        'section_start': 'Seção 1 - Primeiros Passos' 
     },
     'sintaxe': {
         'titulo': 'A sintaxe do Javascript',
@@ -36,7 +38,8 @@ var classes = {
     },
     'dom': {
         'titulo': 'DOM - Document Object Model',
-        'url': '09-dom.html'   
+        'url': '09-dom.html',
+        'section_start': 'Seção 2 - Javasacript Básico (Parte 1)'    
     },
     'trab_dom': {
         'titulo': 'Trabalhando com o DOM',
@@ -64,7 +67,8 @@ var classes = {
     },
     'eventos': {
         'titulo': 'Eventos',
-        'url': '16-eventos.html'   
+        'url': '16-eventos.html'  ,
+        'section_start': 'Seção 3 - Javasacript Básico (Parte 2)'    
     },
     'manipulacao_css': {
         'titulo': 'Manipulação do CSS',
@@ -93,6 +97,84 @@ var classes = {
     'exercicio3': {
         'titulo': 'Folha de Exercícios n. 3',
         'url': '23-exercicio3.html'   
+    },
+    'bom': {
+        'titulo': 'BOM - Browser Object Model',
+        'url': '24-bom.html',
+        'section_start': 'Seção 4 - Javasacript Intermediário (Parte 1)'    
+    },
+    'local-storage': {
+        'titulo': 'Local Storage',
+        'url': '25-local-storage.html',
+    },
+    'data-hora': {
+        'titulo': 'Date e Hora',
+        'url': '26-data-hora.html'   
+    },
+    'metodos-tempo': {
+        'titulo': 'Métodos de Tempo',
+        'url': '27-metodos-tempo.html'   
+    },
+    'switch': {
+        'titulo': 'Switch',
+        'url': '28-switch.html'   
+    },
+    'break-continue': {
+        'titulo': 'Break e Continue',
+        'url': '29-break-continue.html'   
+    },
+    'formularios': {
+        'titulo': 'Formulários',
+        'url': '30-formularios.html'   
+    },
+    'evento-onchange': {
+        'titulo': 'O Evento onchange',
+        'url': '31-evento-onchange.html'   
+    },
+    'exercicio4': {
+        'titulo': 'Folha de Exercícios n. 4',
+        'url': '32-exercicio4.html'   
+    },
+    'jquery-intro': {
+        'titulo': 'jQuery - Introdução',
+        'url': '33-jquery-intro.html',
+        'section_start': 'Seção 5 - jQuery'     
+    },
+    'jquery-sintaxe': {
+        'titulo': 'jQuery - Sintaxe',
+        'url': '34-jquery-sintaxe.html'   
+    },
+    'jquery-manip-html': {
+        'titulo': 'jQuery - Manipulação do Conteúdo HTML',
+        'url': '35-jquery-manipulacao-html.html'   
+    },
+    'jquery-loop-each': {
+        'titulo': 'jQuery - Loop Each',
+        'url': '36-jquery-loop-each.html'   
+    },
+    'jquery-formularios': {
+        'titulo': 'jQuery - Formulários',
+        'url': '37-jquery-formularios.html'   
+    },
+    'jquery-manip-classes-css': {
+        'titulo': 'jQuery - Manipulação de Classes CSS',
+        'url': '38-jquery-manipulacao-classes-css.html'   
+    },
+    'jquery-eventos': {
+        'titulo': 'jQuery - Eventos',
+        'url': '39-jquery-eventos.html'   
+    },
+    'jquery-efeitos': {
+        'titulo': 'jQuery - Efeitos',
+        'url': '40-jquery-efeitos.html'     
+    },
+    'jquery-animate': {
+        'titulo': 'jQuery - Animate',
+        'url': '41-jquery-animate.html'     
+    },
+    'jquery-cadeias': {
+        'titulo': 'jQuery - Métodos em cadeia',
+        'url': '42-jquery-cadeias.html'     
     }
 
 
@@ -109,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var next_class = document.getElementById("next_class");
 
     if (current_class != classes_names[0]) {
+        
         the_prev_url = classes[classes_names[classes_names.indexOf(current_class)-1]].url;
         prev_class.innerHTML = "<a href='" + the_prev_url + "'>" + "&lt;&lt; Aula Anterior" + "</a>";
     }
@@ -119,12 +202,20 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     for ( a = 0 ; a < classes_names.length ; a++) {
-    
+        
+        if (classes[classes_names[a]].section_start) {
+
+            index_element.innerHTML +=     "<div class='section-index'>" + classes[classes_names[a]].section_start + "</div>";
+
+        } 
+                
         if (current_class != classes_names[a]) {
             index_element.innerHTML +=     "<li>" + "<a href='" + classes[classes_names[a]].url + "'>" + classes[classes_names[a]].titulo + "</a>" + "</li>";
         } else {
             index_element.innerHTML +=     "<li>" + classes[classes_names[a]].titulo + "</li>";
         }
+
+        
         
 
     }
