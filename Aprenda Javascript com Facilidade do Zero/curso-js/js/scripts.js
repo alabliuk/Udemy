@@ -391,45 +391,59 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // }
 
 
+// // // ----------------------------------------------------------------
+// // // AULA 25
+
+// // window.localStorage.setItem("nome", "Andre");
+// // console.log(localStorage['nome']);
+
+// document.getElementById("enviar-nome").onclick = function () {
+//     // guardar o nome digitado em local storage
+//     var nome = document.getElementById("nome-usuario").value;
+//     localStorage.setItem("nome", nome);
+
+//     // esconder formulario
+//     document.getElementById("name-field").style.display = "none";
+
+//     // atualizar e mostrar mensagem de boas vindas
+//     document.getElementById("welcome-text").innerHTML = "Olá " + localStorage.nome + ", tudo bem?";
+//     document.getElementById("not-me").innerHTML = "Não é " + localStorage.nome + "?";
+//     document.getElementById("welcome-area").style.display = "initial";
+// }
+
+// if (localStorage.nome) {
+//     // esconder formulario
+//     document.getElementById("name-field").style.display = "none";
+
+//     // atualizar e mostrar mensagem de boas vindas
+//     document.getElementById("welcome-text").innerHTML = "Olá " + localStorage.nome + ", tudo bem?";
+//     document.getElementById("not-me").innerHTML = "Não é " + localStorage.nome + "?";
+//     document.getElementById("welcome-area").style.display = "initial";
+// }
+
+// document.getElementById("not-me").onclick = function () {
+//     // remover chave nome do localstorage
+//     localStorage.removeItem("nome");
+
+//     //esconder mensagem de boas vindas
+//     document.getElementById("welcome-area").style.display = "none";
+
+//     // mostar formulario
+//     document.getElementById("name-field").style.display = "initial";
+// }
+
+
 // // ----------------------------------------------------------------
-// // AULA 25
+// // AULA 26
 
-// window.localStorage.setItem("nome", "Andre");
-// console.log(localStorage['nome']);
+// var data_hoje = new Date()
+// console.log(data_hoje);
 
-document.getElementById("enviar-nome").onclick = function () {
+// Desafio: Cálculo de intervalo de datas
 
-    // guardar o nome digitado em local storage
-    var nome = document.getElementById("nome-usuario").value;
-    localStorage.setItem("nome", nome);
+var envio = new Date('2018-3-20');
+var entrega = new Date('2018-4-06');
 
-    // esconder formulario
-    document.getElementById("name-field").style.display = "none";
+var calc = (entrega - envio)/86400000;
 
-    // atualizar e mostrar mensagem de boas vindas
-    document.getElementById("welcome-text").innerHTML = "Olá " + localStorage.nome + ", tudo bem?";
-    document.getElementById("not-me").innerHTML = "Não é " + localStorage.nome + "?";
-    document.getElementById("welcome-area").style.display = "initial";
-}
-
-if (localStorage.nome) {
-    // esconder formulario
-    document.getElementById("name-field").style.display = "none";
-
-    // atualizar e mostrar mensagem de boas vindas
-    document.getElementById("welcome-text").innerHTML = "Olá " + localStorage.nome + ", tudo bem?";
-    document.getElementById("not-me").innerHTML = "Não é " + localStorage.nome + "?";
-    document.getElementById("welcome-area").style.display = "initial";
-}
-
-document.getElementById("not-me").onclick = function () {
-    // remover chave nome do localstorage
-    localStorage.removeItem("nome");
-
-    //esconder mensagem de boas vindas
-    document.getElementById("welcome-area").style.display = "none";
-
-    // mostar formulario
-    document.getElementById("name-field").style.display = "initial";
-}
-
+document.getElementById('dias_entrega').innerHTML = calc ;
