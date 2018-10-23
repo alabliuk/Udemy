@@ -433,17 +433,46 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // }
 
 
+// // // ----------------------------------------------------------------
+// // // AULA 26
+
+// // var data_hoje = new Date()
+// // console.log(data_hoje);
+
+// // Desafio: Cálculo de intervalo de datas
+
+// var envio = new Date('2018-3-20');
+// var entrega = new Date('2018-4-06');
+
+// var calc = (entrega - envio)/86400000;
+
+// document.getElementById('dias_entrega').innerHTML = calc ;
+
+
 // // ----------------------------------------------------------------
-// // AULA 26
+// // AULA 27
 
-// var data_hoje = new Date()
-// console.log(data_hoje);
+// document.getElementById("mostrar-loader").onclick = function() {
+//     document.getElementById("spinner-loader").style.display = "initial";
+//     setTimeout(() => {
+//         document.getElementById("spinner-loader").style.display = "none";
+//     }, 5000);
+// };
 
-// Desafio: Cálculo de intervalo de datas
+//Desafio: Relógio
 
-var envio = new Date('2018-3-20');
-var entrega = new Date('2018-4-06');
+window.setInterval(function () {
+    now = new Date;
 
-var calc = (entrega - envio)/86400000;
+    function format_time(time) {
+        if (time >= 0 && time <= 9) {
+            var formatted_time = time.toString();
+            formatted_time = "0" + formatted_time;
+        } else {
+            var formatted_time = time.toString();
+        }
+        return formatted_time;
+    }
 
-document.getElementById('dias_entrega').innerHTML = calc ;
+    document.getElementById("relogio").innerHTML = format_time(now.getHours()) + ':' + format_time(now.getMinutes()) + ':' + format_time(now.getSeconds());
+}, 1000);
