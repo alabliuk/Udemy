@@ -477,50 +477,77 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 //     document.getElementById("relogio").innerHTML = format_time(now.getHours()) + ':' + format_time(now.getMinutes()) + ':' + format_time(now.getSeconds());
 // }, 1000);
 
+// // // ----------------------------------------------------------------
+// // // AULA 30
+
+// // combobox
+// document.getElementById("mostrar_opcao").onclick = function () {
+
+//     var campo_select = document.getElementById("options");
+//     var indice_selecionado = campo_select.options.selectedIndex;
+//     var valor_selecionado = campo_select.options[indice_selecionado].innerHTML;
+//     document.getElementById("opcao_selecionada").innerHTML = valor_selecionado;
+// }
+
+// // radio 
+// document.getElementById("mostrar_radio").onclick = function () {
+
+//     var radio = document.getElementsByName("genero");
+//     var radio_selected;
+
+//     for (var a = 0; a < radio.length; a++) {
+//         if (radio[a].checked) {
+//             radio_selected = radio[a].value;
+//             break;
+//         }
+//     }
+//     document.getElementById("radio_selecionado").innerHTML = radio_selected;
+// };
+
+
+// // checkBoxes
+// document.getElementById("mostrar_check").onclick = function () {
+//     var check = document.getElementsByName("interesse");
+//     document.getElementById("check_selecionado").innerHTML = "";
+
+//     for (var b = 0; b < check.length; b++) {
+//         if (check[b].checked) {
+//             document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+//         }
+//     }
+// };
+
+
+// // data
+// document.getElementById("mostrar_data").onclick = function () {
+//     var data_select = document.getElementById("data_evento").value;
+//     var data_completa = new Date(data_select);
+//     document.getElementById("data_selecionada").innerHTML = data_completa;
+// };
+
+
 // // ----------------------------------------------------------------
-// // AULA 30
+// // AULA 31
 
-// combobox
-document.getElementById("mostrar_opcao").onclick = function () {
+document.getElementById("escolaridade").onchange = function () {
 
-    var campo_select = document.getElementById("options");
+    var campo_select = document.getElementById("escolaridade");
     var indice_selecionado = campo_select.options.selectedIndex;
     var valor_selecionado = campo_select.options[indice_selecionado].innerHTML;
-    document.getElementById("opcao_selecionada").innerHTML = valor_selecionado;
+    document.getElementById("escolaridade_selecionada").innerHTML = valor_selecionado;
+
+};
+
+
+var check = document.getElementsByName("lanche");
+
+for (var a = 0; a < check.length; a++) {
+    check[a].onchange = function () {
+        document.getElementById("check_selecionado").innerHTML = "";
+        for (var b = 0; b < check.length; b++) {
+            if (check[b].checked) {
+                document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+            }
+        }
+    }
 }
-
-// radio 
-document.getElementById("mostrar_radio").onclick = function () {
-
-    var radio = document.getElementsByName("genero");
-    var radio_selected;
-
-    for (var a = 0; a < radio.length; a++) {
-        if (radio[a].checked) {
-            radio_selected = radio[a].value;
-            break;
-        }
-    }
-    document.getElementById("radio_selecionado").innerHTML = radio_selected;
-};
-
-
-// checkBoxes
-document.getElementById("mostrar_check").onclick = function () {
-    var check = document.getElementsByName("interesse");
-    document.getElementById("check_selecionado").innerHTML = "";
-
-    for (var b = 0; b < check.length; b++) {
-        if (check[b].checked) {
-            document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
-        }
-    }
-};
-
-
-// data
-document.getElementById("mostrar_data").onclick = function () {
-    var data_select = document.getElementById("data_evento").value;
-    var data_completa = new Date(data_select);
-    document.getElementById("data_selecionada").innerHTML = data_completa;
-};
