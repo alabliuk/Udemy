@@ -461,18 +461,45 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 
 //Desafio: Relógio
 
-window.setInterval(function () {
-    now = new Date;
+// window.setInterval(function () {
+//     now = new Date;
 
-    function format_time(time) {
-        if (time >= 0 && time <= 9) {
-            var formatted_time = time.toString();
-            formatted_time = "0" + formatted_time;
-        } else {
-            var formatted_time = time.toString();
+//     function format_time(time) {
+//         if (time >= 0 && time <= 9) {
+//             var formatted_time = time.toString();
+//             formatted_time = "0" + formatted_time;
+//         } else {
+//             var formatted_time = time.toString();
+//         }
+//         return formatted_time;
+//     }
+
+//     document.getElementById("relogio").innerHTML = format_time(now.getHours()) + ':' + format_time(now.getMinutes()) + ':' + format_time(now.getSeconds());
+// }, 1000);
+
+// // ----------------------------------------------------------------
+// // AULA 30
+
+// combobox
+document.getElementById("mostrar_opcao").onclick = function () {
+
+    var campo_select = document.getElementById("options");
+    var indice_selecionado = campo_select.options.selectedIndex;
+    var valor_selecionado = campo_select.options[indice_selecionado].innerHTML;
+    document.getElementById("opcao_selecionada").innerHTML = valor_selecionado;
+}
+
+// radio 
+document.getElementById("mostrar_radio").onclick = function () {
+
+    var radio = document.getElementsByName("genero");
+    var radio_selected;
+
+    for (var a = 0; a < radio.length; a++) {
+        if (radio[a].checked) {
+            radio_selected = radio[a].value;
+            break;
         }
-        return formatted_time;
     }
-
-    document.getElementById("relogio").innerHTML = format_time(now.getHours()) + ':' + format_time(now.getMinutes()) + ':' + format_time(now.getSeconds());
-}, 1000);
+    document.getElementById("radio_selecionado").innerHTML = radio_selected;
+};
