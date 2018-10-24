@@ -503,3 +503,24 @@ document.getElementById("mostrar_radio").onclick = function () {
     }
     document.getElementById("radio_selecionado").innerHTML = radio_selected;
 };
+
+
+// checkBoxes
+document.getElementById("mostrar_check").onclick = function () {
+    var check = document.getElementsByName("interesse");
+    document.getElementById("check_selecionado").innerHTML = "";
+
+    for (var b = 0; b < check.length; b++) {
+        if (check[b].checked) {
+            document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+        }
+    }
+};
+
+
+// data
+document.getElementById("mostrar_data").onclick = function () {
+    var data_select = document.getElementById("data_evento").value;
+    var data_completa = new Date(data_select);
+    document.getElementById("data_selecionada").innerHTML = data_completa;
+};
