@@ -553,9 +553,18 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // }
 
 
-// // ----------------------------------------------------------------
-// // AULA 34
+// // // ----------------------------------------------------------------
+// // // AULA 34
 
-$("#esconder").click(function () {
-    $(".exemplo").hide();
+// $("#esconder").click(function () {
+//     $(".exemplo").hide();
+// });
+
+
+// // ----------------------------------------------------------------
+// // AULA 36
+
+var lista = $("#interesses li");
+$.each(lista, function (chave, valor) {
+    console.log($(valor).text());
 });
