@@ -529,25 +529,33 @@ caso contrário a divisão num2 / 2 seria realizada antes da soma, devido à ord
 // // ----------------------------------------------------------------
 // // AULA 31
 
-document.getElementById("escolaridade").onchange = function () {
+// document.getElementById("escolaridade").onchange = function () {
 
-    var campo_select = document.getElementById("escolaridade");
-    var indice_selecionado = campo_select.options.selectedIndex;
-    var valor_selecionado = campo_select.options[indice_selecionado].innerHTML;
-    document.getElementById("escolaridade_selecionada").innerHTML = valor_selecionado;
+//     var campo_select = document.getElementById("escolaridade");
+//     var indice_selecionado = campo_select.options.selectedIndex;
+//     var valor_selecionado = campo_select.options[indice_selecionado].innerHTML;
+//     document.getElementById("escolaridade_selecionada").innerHTML = valor_selecionado;
 
-};
+// };
 
 
-var check = document.getElementsByName("lanche");
+// var check = document.getElementsByName("lanche");
 
-for (var a = 0; a < check.length; a++) {
-    check[a].onchange = function () {
-        document.getElementById("check_selecionado").innerHTML = "";
-        for (var b = 0; b < check.length; b++) {
-            if (check[b].checked) {
-                document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
-            }
-        }
-    }
-}
+// for (var a = 0; a < check.length; a++) {
+//     check[a].onchange = function () {
+//         document.getElementById("check_selecionado").innerHTML = "";
+//         for (var b = 0; b < check.length; b++) {
+//             if (check[b].checked) {
+//                 document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+//             }
+//         }
+//     }
+// }
+
+
+// // ----------------------------------------------------------------
+// // AULA 34
+
+$("#esconder").click(function () {
+    $(".exemplo").hide();
+});
