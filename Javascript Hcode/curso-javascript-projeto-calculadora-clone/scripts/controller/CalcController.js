@@ -7,7 +7,7 @@ class CalcController {
         this._timeE1 = document.querySelector("#hora");
         this._currentDate;
         this.initialize();
-        this.initButtonsEvents();
+        this.initButtonsEvents();        
     }
 
     initialize() {
@@ -18,13 +18,24 @@ class CalcController {
         }, 1000);
     }
 
+    addEventListenerAll(element, events, fn) {
+        events.split(" ").forEach(event => {
+            element.addEventListener(event, fn, false);
+        });
+    }
+
     initButtonsEvents() {
         let buttons = document.querySelectorAll("#buttons > g, #parts > g");
 
         buttons.forEach((btn, index) => {
-            btn.addEventListener('click', e => {
-                // btn.className.baseVal -> retorna o nome do botao em string
+            this.addEventListenerAll(btn, "click drag", e => {
+                // *** btn.className.baseVal -> retorna o nome do botao em string
                 console.log(btn.className.baseVal.replace('btn-', ''));
+            })
+
+            // *** colocando o cursor de 'maozinha' quando se coloca o mouse sobre o botão
+            this.addEventListenerAll(btn, "mouseover mouseup mousedown", e => {
+                btn.style.cursor = "pointer";
             })
         });
     }
