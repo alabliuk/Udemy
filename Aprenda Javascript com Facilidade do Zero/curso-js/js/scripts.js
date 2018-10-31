@@ -587,7 +587,7 @@ $(function () {
     // });
 
     // ----------------------------------------------------------------
-    // // AULA 40
+    // // AULA 42
 
     // $("#animar").click(function () {
     //     $("#quadrado").animate({
@@ -596,22 +596,17 @@ $(function () {
     //     }, 2000);
     // });
 
-    $("#animar").click(function () {
+    // $("#animar").click(function () {
 
-        $("#quadrado").animate({
-            width: '+=100px'
-        }, 500);
+    //     $("#quadrado").animate({
+    //         width: '+=100px'
+    //     }, 500);
 
-        $("#quadrado").animate({
-            height: '+=100px'
-        }), 500;
+    //     $("#quadrado").animate({
+    //         height: '+=100px'
+    //     }), 500;
 
-    });
-
-
-
-
-
+    // });
 
 
 
