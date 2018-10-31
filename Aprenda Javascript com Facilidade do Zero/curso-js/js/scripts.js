@@ -573,19 +573,40 @@ $(function () {
     // });
 
     // // ----------------------------------------------------------------
-    // // AULA 38
+    // // // AULA 38
 
-    $("#nome").keyup(function () {
+    // $("#nome").keyup(function () {
 
-        var conteudoNome = $("#nome").val();
-        if (conteudoNome) {
-            $("#confirmar").css("display", "");
-        }
-        else {
-            $("#confirmar").css("display", "none");
-        }
+    //     var conteudoNome = $("#nome").val();
+    //     if (conteudoNome) {
+    //         $("#confirmar").css("display", "");
+    //     }
+    //     else {
+    //         $("#confirmar").css("display", "none");
+    //     }
+    // });
+
+    // ----------------------------------------------------------------
+    // // AULA 40
+
+    // $("#animar").click(function () {
+    //     $("#quadrado").animate({
+    //         width: '+=20px',
+    //         height: '+=20px'
+    //     }, 2000);
+    // });
+
+    $("#animar").click(function () {
+
+        $("#quadrado").animate({
+            width: '+=100px'
+        }, 500);
+
+        $("#quadrado").animate({
+            height: '+=100px'
+        }), 500;
+
     });
-
 
 
 
