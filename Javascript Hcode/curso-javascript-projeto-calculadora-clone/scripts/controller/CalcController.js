@@ -32,6 +32,8 @@ class CalcController {
 
     clearAll() {
         this._operation = [];
+        this._lastNumber = '';
+        this._lastOperator = '';
         this.setLastNumberToDisplay();
     }
 
@@ -69,7 +71,7 @@ class CalcController {
         let last = '';
         this._lastOperator = this.getLastItem();
 
-        if(this._operation.length < 3){
+        if (this._operation.length < 3) {
             let firstItem = this._operation[0];
             this._operation = [firstItem, this._lastOperator, this._lastNumber];
         }
@@ -82,9 +84,6 @@ class CalcController {
         } else if (this._operation.length == 3) {
             this._lastNumber = this.getLastItem(false);
         }
-
-        console.log('_lastOperator: ' + this._lastOperator);
-        console.log('_lastNumber: ' + this._lastNumber);
 
         let result = this.getResult();
 
@@ -108,7 +107,7 @@ class CalcController {
             }
         }
 
-        if(!lastItem){
+        if (!lastItem) {
             lastItem = (isOperator) ? this._lastOperator : this._lastNumber;
         }
         return lastItem;
@@ -130,10 +129,6 @@ class CalcController {
             if (this.isOperator(value)) {
                 // troca o operador
                 this.setLastOperation(value);
-            }
-
-            else if (isNaN(value)) {
-                console.log(value);
 
             } else {
                 // primeiro numero do array
@@ -147,18 +142,31 @@ class CalcController {
 
             } else {
                 let newValue = this.getLastOperation().toString() + value.toString();
-                this.setLastOperation(parseInt(newValue));
+                this.setLastOperation(parseFloat(newValue));
 
                 // atualizar display
                 this.setLastNumberToDisplay();
             }
 
         }
-        console.log(this._operation);
     }
 
     setError() {
         this.displayCalc = "Error";
+    }
+
+    addDot() {
+        let lastOperation = this.getLastOperation();
+
+        if (this.isOperator(lastOperation) || !lastOperation) {
+            this.pushOperation('0.');
+        } else {
+            this.setLastOperation(lastOperation.toString() + '.');
+        }
+
+        this.setLastNumberToDisplay();
+
+        console.log(lastOperation);
     }
 
     execBtn(value) {
@@ -196,7 +204,7 @@ class CalcController {
                 break;
 
             case 'ponto':
-                this.addOperation('.');
+                this.addDot('.');
                 break;
 
             case '0':
