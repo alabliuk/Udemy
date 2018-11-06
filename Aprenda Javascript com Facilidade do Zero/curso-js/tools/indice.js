@@ -175,8 +175,55 @@ var classes = {
     'jquery-cadeias': {
         'titulo': 'jQuery - Métodos em cadeia',
         'url': '42-jquery-cadeias.html'     
-    }
+    },
+    'callback': {
+        'titulo': 'Funções Callback',
+        'url': '43-funcoes-callback.html',
+        'section_start': 'Seção 6 - Javasacript Intermediário/Avançado'       
+    },
+    'error-handling': {
+        'titulo': 'Lidando com erros (Error Handling)',
+        'url': '44-error-handling.html'     
+    },
+    'if-ternario': {
+        'titulo': 'Operador If Ternário',
+        'url': '45-if-ternario.html'     
+    },
+    'escopo': {
+        'titulo': 'Escopo',
+        'url': '46-escopo.html'     
+    },
+    'namespaces': {
+        'titulo': 'Namespaces',
+        'url': '47-namespaces.html'     
+    },
+    'json': {
+        'titulo': 'JSON',
+        'url': '48-json.html'     
+    },
+    
+    'ajax-intro': {
+        'titulo': 'AJAX - Introdução',
+        'url': '49-ajax-intro.html',
+        'section_start': 'Seção 7 - AJAX'  
+    },
+    'ajax-request': {
+        'titulo': 'AJAX - Request',
+        'url': '50-ajax-request.html',
+    },
+    'ajax-response': {
+        'titulo': 'AJAX - Response',
+        'url': '51-ajax-response.html',
+    },
+    'ajax-jquery': {
+        'titulo': 'AJAX com jQuery',
+        'url': '52-ajax-jquery.html',
+    },
+    'exercicio5': {
+        'titulo': 'Folha de Exercícios n. 5',
+        'url': '53-exercicio5.html',
 
+    },
 
 
 };
