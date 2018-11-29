@@ -155,8 +155,15 @@ class CalcController {
     }
 
     getResult() {
-        // juntando todo o valor do array sem virgulas
-        return eval(this._operation.join(""));
+
+        try {
+            // juntando todo o valor do array sem virgulas
+            return eval(this._operation.join(""));
+        } catch (e) {
+            setTimeout(() => {
+                this.setError();
+            }, 1);
+        }
     }
 
     calc() {
