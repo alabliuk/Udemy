@@ -1,7 +1,10 @@
-document.querySelector("#exampleInputName")
+var name = document.querySelector("#exampleInputName");
+var gender = document.querySelectorAll("#form-user-create [name=gender]:checked");
+var birth = document.querySelector("#exampleInputBirth");
+var country = document.querySelector("#exampleInputCountry");
+var email = document.querySelector("#exampleInputEmail");
+var pasword = document.querySelector("#exampleInputPassword");
+var photo = document.querySelector("#exampleInputFile");
+var admin = document.querySelector("exampleInputAdmin");
 
-var generoM = document.querySelector("#exampleInputGenderM");
-var generoF = document.querySelector("#exampleInputGenderF");
-
-console.log(generoM);
-console.log(generoF);
+console.log(admin);
