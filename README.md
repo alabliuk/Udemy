@@ -3,6 +3,9 @@ Repositório de estudos utilizando a plataforma Udemy
 
 URLs:
 
+Crie bot através de Web Scraping, Crawling com C# e Selenium
+https://www.udemy.com/crie-bot-atraves-de-web-scraping-crawling-com-c-e-selenium/
+
 JavaScript - Curso Completo com 6 Projetos Reais
 https://www.udemy.com/javascript-curso-completo
 
