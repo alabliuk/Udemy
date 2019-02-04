@@ -3,6 +3,12 @@ Repositório de estudos utilizando a plataforma Udemy
 
 URLs:
 
+CSS Grid: o sistema definitivo de layouts
+https://www.udemy.com/css-grid-layout/
+
+CSS: um passo adiante
+https://www.udemy.com/css-um-passo-adiante/
+
 Crie bot através de Web Scraping, Crawling com C# e Selenium
 https://www.udemy.com/crie-bot-atraves-de-web-scraping-crawling-com-c-e-selenium/
 
