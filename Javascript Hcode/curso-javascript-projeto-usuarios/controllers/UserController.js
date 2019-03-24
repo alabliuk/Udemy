@@ -10,9 +10,9 @@ class UserController {
     onSubmit() {
 
         this.formE1.addEventListener("submit", event => {
-            
+
             event.preventDefault();
-            
+
             this.addLine(this.getValues());
         });
     }
@@ -20,7 +20,8 @@ class UserController {
     getValues() {
         let user = {};
 
-        this.fields.elements.forEach(function (field, index) {
+        // [...] = Operador Spread
+        [...this.formE1.elements].forEach(function (field, index) {
 
             if (field.name == "gender") {
                 if (field.checked) {
