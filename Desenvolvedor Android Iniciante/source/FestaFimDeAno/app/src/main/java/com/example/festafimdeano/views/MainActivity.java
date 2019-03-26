@@ -11,10 +11,14 @@ import com.example.festafimdeano.R;
 import com.example.festafimdeano.constants.FimDeAnoConstants;
 import com.example.festafimdeano.util.SecurityPreferences;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
     private SecurityPreferences mSecurityPreferences;
+    private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.buttonConfirm = (Button) findViewById(R.id.button_confirm);
         this.mViewHolder.buttonConfirm.setOnClickListener(this);
         this.mSecurityPreferences = new SecurityPreferences(this);
+        this.mViewHolder.textToday.setText(SIMPLE_DATE_FORMAT.format(Calendar.getInstance().getTime()));
+
+        String daysLeft = String.format("%s %s", String.valueOf(this.getDaysLeftToEndOfYear()), getString(R.string.dias));
+        this.mViewHolder.textDaysLeft.setText(daysLeft);
     }
 
     @Override
@@ -66,6 +74,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra(FimDeAnoConstants.PRESENCE, presence);
             startActivity(intent);
         }
+    }
+
+    private int getDaysLeftToEndOfYear() {
+        Calendar calendarToday = Calendar.getInstance();
+        int today = calendarToday.get(Calendar.DAY_OF_YEAR);
+
+        Calendar calendarLastDay = Calendar.getInstance();
+        int dayDecember31 = calendarLastDay.getActualMaximum(Calendar.DAY_OF_YEAR);
+
+        return dayDecember31 - today;
     }
 
     private void verifyPreference() {
