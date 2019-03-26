@@ -26,7 +26,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.buttonConfirm = (Button) findViewById(R.id.button_confirm);
         this.mViewHolder.buttonConfirm.setOnClickListener(this);
         this.mSecurityPreferences = new SecurityPreferences(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         this.verifyPreference();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
